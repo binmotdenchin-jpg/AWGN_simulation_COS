@@ -1,0 +1,10 @@
+BIT-WIDTH SWEEP (m=m'=7 fixed, vary output B)
+=======================================================
+  B  RelErrBulk%      KS%   Levels     Std
+  4         8.15    1.743      134   1.028
+  6         3.42    0.465      495   1.009
+  8         2.61    0.175     1818   1.004
+ 10         2.52    0.158     6363   1.003
+
+Ket luan: B=4 -> comb tho, sai so lon. B>=8 -> cai thien nho
+nhung output width tang. B=6 can bang accuracy/resource.

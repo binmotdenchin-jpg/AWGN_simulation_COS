@@ -1,0 +1,17 @@
+D5 STATISTICAL VERIFICATION SUMMARY
+==================================================
+N samples = 300000
+
+Fr = sqrt(-ln x)  [Boutillon eq.1, std target=1]:
+  mean=+0.00387 std=1.00843 skew=+0.0055 kurt=2.9753
+
+Fr = sqrt(-2ln x) [code hien tai, std=sqrt2]:
+  mean=+0.00385 std=1.42262 skew=+0.0054 kurt=2.9786
+
+Chi-square (N=300000, oversensitive): chi2=603.17 dof=45 p=0.0000
+Chi-square (N=8000, valid test): chi2=57.60 dof=33 p=0.0051 FAIL
+KS distance D=0.00494 (0.494%)
+Relative PDF error bulk(|z|<3): max=13.87% mean=2.93%
+Relative PDF error tail(3<=|z|<4): max=38.4% (Poisson noise up to 39.2%)
+PSD ripple = 9.93 dB
+Autocorr lags out of 95%CI = 3/50
