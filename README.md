@@ -71,22 +71,4 @@ cd ../rtl/synth && cp ../src/fr_table.txt ../src/g_table.txt . && vivado -mode b
 # (MATLAB) chạy toàn bộ D2 + golden:  cd matlab/fixed_model && run_d2_pipeline
 ```
 
-## Cập nhật bản tối ưu (mới)
 
-- **Sửa lỗi `valid`** trong `taus_urng.v`: valid nay là strobe, pipeline chịu được
-  tạm dừng `en` giữa chừng (trước đây sinh mẫu trùng — xem `rtl/README.md`).
-- **`lzc32.v`** viết lại dạng binary-search 5 tầng (giảm độ sâu logic 32→5).
-- **`bm_core.v`/`awgn_top.v`** thêm tham số `PIPE` (0 = như cũ, 1 = 2-stage,
-  cắt critical path để tăng Fmax; giá trị output không đổi).
-- **`rtl/tb/tb_awgn_pause.v`** (test en-toggling) và **`rtl/rtl_cosim.py`**
-  (đồng mô phỏng cycle-accurate bằng Python, không cần iverilog):
-  `cd rtl && python3 gen_golden.py tb 2000 && python3 rtl_cosim.py tb`
-  → 6/6 cấu hình PASS, 0 sai lệch (BM 8000, CLT 2000 mỗi cấu hình).
-- Đồng bộ chú thích/docstring (FR_W=9, công thức √(−ln x), default `m1ln`).
-
-## Việc cần làm ở môi trường của bạn
-
-- Chạy Vivado thật để thay số liệu tài nguyên/định thời vào chương 6 (hiện là ước lượng).
-- Nếu đề yêu cầu: demo trên board FPGA.
-- Điền tên SV/GVHD ở trang bìa báo cáo.
-```
