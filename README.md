@@ -3,9 +3,6 @@
 Thiết kế và kiểm chứng bộ sinh nhiễu Gauss cho channel emulation, phương pháp
 Boutillon–Danger–Ghazel (ICECS 2000). Đồng thiết kế bit-accurate MATLAB ↔ RTL Verilog.
 
-> Phiên bản này đã **sửa và đồng bộ** hai sai khác: (1) công thức Fr về √(−ln x)
-> để std=1; (2) độ rộng từ G ROM = 9 bit. MATLAB ↔ RTL ↔ báo cáo hoàn toàn nhất quán.
-> Đồng mô phỏng lại: **0 sai lệch** ở cả ba mức.
 
 ## Cấu trúc
 
