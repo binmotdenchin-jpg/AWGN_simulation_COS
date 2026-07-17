@@ -1,4 +1,4 @@
-# Bộ sinh AWGN — Box-Muller + CLT (đồ án hoàn chỉnh)
+# Bộ sinh AWGN — Box-Muller + CLT
 
 Thiết kế và kiểm chứng bộ sinh nhiễu Gauss cho channel emulation, phương pháp
 Boutillon–Danger–Ghazel (ICECS 2000). Đồng thiết kế bit-accurate MATLAB ↔ RTL Verilog.
